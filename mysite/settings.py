@@ -20,10 +20,14 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/2.1/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'your_secret_key_here'
+SECRET_KEY = 'your_key_here'
 
 # SECURITY WARNING: don't run with debug turned on in production!
+
+#Flaw 3: Security Misconfiguration
 DEBUG = True
+#Flaw 3 fix:
+#DEBUG = False
 
 ALLOWED_HOSTS = []
 
@@ -40,6 +44,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
 ]
 
+#Flaw 4: CSRF
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -48,8 +53,9 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    #Flaw 4 fix:
+    #'django.middleware.csrf.CsrfViewMiddleware'
 ]
-
 ROOT_URLCONF = 'mysite.urls'
 
 TEMPLATES = [
