@@ -2,7 +2,7 @@
 Polls
 =====
 
-USERNAME: admin
+USERNAME: admin -
 PASSWORD: password
 
 =====
