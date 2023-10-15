@@ -6,7 +6,7 @@ USERNAME: admin
 PASSWORD: password
 
 =====
-READ THE PDF FOR MORE INFO
+Read the PDF for documentation.
 =====
 
 Polls is a Django app to conduct Web-based polls. For each question,
